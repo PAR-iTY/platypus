@@ -1,5 +1,8 @@
-# <a href="https://diathelia.github.io/Platypus">Platypus</a>
+# <a href="https://par-ity.github.io/platypus">Platypus</a>
+
 <img src="https://i.pinimg.com/originals/17/5e/f2/175ef22c95918002bba266a898644de8.jpg">
+
+## 2017
 
 An audio tool which uses the Web Audio API to record, visualize and edit mp3 blobs
 
@@ -18,14 +21,20 @@ Platypus uses FileSaver.js to give blob downloads semantic filenames instead of 
 This repo also contains a feature detection script for all core dependencies and also<br>
 run Platypus audio specific tests properties on the following two bugs:
 
- - Sometimes the audio blob is properly encoded but the browser fails to display it;<br>
-   to counteract this a sample blob mp3 from Platypus is included to test blob URLs
+- Sometimes the audio blob is properly encoded but the browser fails to display it;<br>
+  to counteract this a sample blob mp3 from Platypus is included to test blob URLs
 
- - Sometimes the hardware and browser prefers sample rates and buffer sizes which<br>
-   can cause a sporadic mixture of sped-up playback and high-end artifacts; while this<br>
-   is currently fixed via a forced huge bufferSize of 16384 bytes, new devices and<br>
-   operating systems may have issues reoccur. To help debug them the preferred<br>
-   sample and buffer values are also saved.
-   
+- Sometimes the hardware and browser prefers sample rates and buffer sizes which<br>
+  can cause a sporadic mixture of sped-up playback and high-end artifacts; while this<br>
+  is currently fixed via a forced huge bufferSize of 16384 bytes, new devices and<br>
+  operating systems may have issues reoccur. To help debug them the preferred<br>
+  sample and buffer values are also saved.
+
 When run, this script saves the level of support and preferred sample/buffer values;<br>
 these are all returned as an object to the IsMicSupported global module for access
+
+## 2021 Update
+
+This was my first big web project and it is structurally quite monolithic and problematic - error handling and setIntervals and driven by global mutations and such.the control flow is quite difficult to follow but largely appears to work performantly.
+
+I've made a few fixes and changes, mostly unloading resources on error and modularising the feature detection script, and because of better browser-security a breaking change around asking for user media. running the feature detection module on input fixed this.

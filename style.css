@@ -1,263 +1,294 @@
 /* note: @media max-height and !important's required, probably due to ID-based specificity clashes */
 @media only screen and (max-width: 768px) {
-    #container {
-        max-height: 92%;
-    }
-    #playerUI {
-        max-height: 4em;
-    }
-    #playerUI img {
-        max-height: 3em;
-        max-width: 2.5em;
-    }
-    #slide-wrap {
-        padding: 0 1.2em !important;
-        max-height: 4em;
-    }
-    #slider {
-        background-position: 0px 31px !important;
-        max-height: 4em;
-    }
-    #leftHandle, #rightHandle, #timeHandle {
-        max-width: 2.4em;                 /* custom slider width requirement: */
-        margin-left: -1.2em !important;   /* margin-left must equal the negative half of width */
-    }
+  #container {
+    max-height: 92%;
+  }
+  #playerUI {
+    max-height: 4em;
+  }
+  #playerUI img {
+    max-height: 3em;
+    max-width: 2.5em;
+  }
+  #slide-wrap {
+    padding: 0 1.2em !important;
+    max-height: 4em;
+  }
+  #slider {
+    background-position: 0px 31px !important;
+    max-height: 4em;
+  }
+  #leftHandle,
+  #rightHandle,
+  #timeHandle {
+    max-width: 2.4em; /* custom slider width requirement: */
+    margin-left: -1.2em !important; /* margin-left must equal the negative half of width */
+  }
 }
 
 @media only screen and (max-width: 425px) {
-    #container {
-        max-height: 95%;
-    }
-    #playerUI {
-        max-height: 3em;
-    }
-    #playerUI img {
-        margin-left: 0 !important;
-        max-width: 1.7em;
-    }
+  #container {
+    max-height: 95%;
+  }
+  #playerUI {
+    max-height: 3em;
+  }
+  #playerUI img {
+    margin-left: 0 !important;
+    max-width: 1.7em;
+  }
 }
 
 /* general page styling */
-html, body {
-    margin: 0;
-    padding: 0;
-    border: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    background-image: url('img/monotreme.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url('img/monotreme.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 #container {
-    width: 93%;
-    height: 95%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 93%;
+  height: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    background-color: auto;
-    color: white;
-    margin: 0;
-    padding: 0;
-    border: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: auto;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* centering / floating class */
 .float {
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* centered bar sections */
 #timebar {
-    height: 5%;
-    text-align: center;
+  height: 5%;
+  text-align: center;
 }
 
 #timer {
-    margin: 0;
-    padding: 0;
-    font-size: 2em;   
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
 }
 
 #bg {
-    background-color: rgba(0, 82, 100, 0.5);
-    color: auto;
-    margin: 0;
-    border: 0.05em solid white;
-    padding: 0.3em 0.2em 0.5em 0.3em;
+  background-color: rgba(0, 82, 100, 0.5);
+  color: auto;
+  margin: 0;
+  border: 0.05em solid white;
+  padding: 0.3em 0.2em 0.5em 0.3em;
 }
 
 #startbar {
-    height: 10%;
-    text-align: center;
-    background-image: url('img/circlebar.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  height: 10%;
+  text-align: center;
+  background-image: url('img/circlebar.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #startbar img {
-    height: 100%;
-    cursor: pointer;
+  height: 100%;
+  cursor: pointer;
 }
 
 /* canvas */
 #canvas {
-    height: 50%;
-    width: 100%;
-    background-color: transparent;
-    color: auto;
+  height: 50%;
+  width: 100%;
+  background-color: transparent;
+  color: auto;
 }
 
 /* slider */
 #slide-wrap {
-    background-color: #998BA1;
-    color: auto;
-    padding: 0 1.5em;
-    height: 5em;
-    border-radius: 0.8em;
-    margin-top: 0.3em;
+  background-color: #998ba1;
+  color: auto;
+  padding: 0 1.5em;
+  height: 5em;
+  border-radius: 0.8em;
+  margin-top: 0.3em;
 }
 
 #slider {
-    height: 5em;
-    border: 0;
-    background-image: repeating-linear-gradient(0deg,transparent,transparent 50px,#CCC 50px,#CCC 51px),
-                      repeating-linear-gradient(-90deg,transparent,transparent 50px,#CCC 50px,#CCC 51px);
-    background-size: 51px 51px;
-    background-position: 0px 38.9px;
+  height: 5em;
+  border: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      #ccc 50px,
+      #ccc 51px
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      transparent,
+      transparent 50px,
+      #ccc 50px,
+      #ccc 51px
+    );
+  background-size: 51px 51px;
+  background-position: 0px 38.9px;
 }
 
 /* colored divs to show handle progress */
-#leftDiv, #rightDiv {
-    position: absolute;
-    background-color: rgb(202, 190, 209);
-    color: auto;
-    z-index: 2;
-    height: 100%;
-    top: 0;
+#leftDiv,
+#rightDiv {
+  position: absolute;
+  background-color: rgb(202, 190, 209);
+  color: auto;
+  z-index: 2;
+  height: 100%;
+  top: 0;
 }
 
 #leftDiv {
-    left: 0;
-    width: 0.0%;
+  left: 0;
+  width: 0%;
 }
 
 #rightDiv {
-    right: 0;
-    width: 0.0%;
+  right: 0;
+  width: 0%;
 }
 
 #timeDiv {
-    position: absolute;
-    background-color: rgba(94, 217, 191, 0.5);
-    color: auto;
-    z-index: 1;
-    height: 100%;
-    left: 0;
-    width: 0.0%;
+  position: absolute;
+  background-color: rgba(94, 217, 191, 0.5);
+  color: auto;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+  width: 0%;
 }
 
 /* handles */
-#leftHandle, #rightHandle, #timeHandle {
-    top: -0.001em;       /* centering-fix for custom slider height */
-    height: 100%;
-    width: 3em;          /* custom slider width requirement: */
-    margin-left: -1.5em; /* margin-left must equal the negative half of width */
-    outline: none;
-    border: 0;
-    background-position: center;
-    background-size: auto;
-    cursor: pointer;
+#leftHandle,
+#rightHandle,
+#timeHandle {
+  top: -0.001em; /* centering-fix for custom slider height */
+  height: 100%;
+  width: 3em; /* custom slider width requirement: */
+  margin-left: -1.5em; /* margin-left must equal the negative half of width */
+  outline: none;
+  border: 0;
+  background-position: center;
+  background-size: auto;
+  cursor: pointer;
 }
 
 #leftHandle {
-    background: transparent url('img/leftHandle.svg') no-repeat border-box scroll;
+  background: transparent url('img/leftHandle.svg') no-repeat border-box scroll;
 }
 
 #rightHandle {
-    background: transparent url('img/rightHandle.svg') no-repeat border-box scroll;
+  background: transparent url('img/rightHandle.svg') no-repeat border-box scroll;
 }
 
 #timeHandle {
-    background: transparent url('img/timeHandle.svg') no-repeat border-box scroll;
+  background: transparent url('img/timeHandle.svg') no-repeat border-box scroll;
 }
 
 /* custom audio controls */
 #playerUI {
-    background-color: rgba(94, 217, 191, 0.3);
-    color: auto;
-    height: 10%;
-    width: 100%;
-    text-align: center;
-    border-radius: 0.8em;
-    margin-top: 0.3em;
+  background-color: rgba(94, 217, 191, 0.3);
+  color: auto;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.8em;
+  margin-top: 0.3em;
 }
 
 #playerUI img {
-    min-height: 100%;
-    cursor: pointer;
-    margin-left: 3vw;
+  min-height: 100%;
+  cursor: pointer;
+  margin-left: 3vw;
 }
 
 #duration {
-    background-color: auto;
-    color: white;
-    font-size: 1.3em;
+  background-color: auto;
+  color: white;
+  font-size: 1.3em;
 }
 
 #volume {
-    min-width: 0.9em;
-    width: 10%;
-    background-color: transparent;
-    color: auto;
-    outline: none;
-    border: 0;
+  min-width: 0.9em;
+  width: 10%;
+  background-color: transparent;
+  color: auto;
+  outline: none;
+  border: 0;
 }
 
 /* keep / discard modal */
 #keep-discard {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #keep-discard p {
-    background-color: auto;
-    color: black;
-    margin-bottom: 1em;
+  background-color: auto;
+  color: black;
+  margin-bottom: 1em;
 }
 
 #download-edit {
-    margin-bottom: -4px;
-    cursor: pointer;
+  margin-bottom: -4px;
+  cursor: pointer;
 }
 
 #edited {
-    margin-top: 1em;
-    margin-left: -0.7em; /* pulls visible part of <audio> back in-line with text */
+  margin-top: 1em;
+  margin-left: -0.7em; /* pulls visible part of <audio> back in-line with text */
 }
 
 /* hide most functionality on init */
-#slide-wrap, #slider, #playerUI, #editBtn, #storeBtn, #upBtn, #timer, #bg {
-    visibility: hidden;
+#slide-wrap,
+#slider,
+#playerUI,
+#editBtn,
+#storeBtn,
+#upBtn,
+#timer,
+#bg {
+  visibility: hidden;
 }
 
-#stopBtn, #keep-discard {
-    display: none;
+/* disable upload button for public site */
+#upBtn {
+  pointer-events: none;
+}
+
+#stopBtn,
+#keep-discard {
+  display: none;
 }
 
 /* hiding via margin due to a Firefox playback bug:
    if audio element is hidden on not displayed, then
    the custom JavaScript control play(); can break */
 #source {
-    margin-left: -9999px;
+  margin-left: -9999px;
 }
