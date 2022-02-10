@@ -1,6 +1,5 @@
 As this repository builds upon Lamejs and its LGPL 2.1+ license,
 it will use this LGPL 2.1 license and welcomes any contribution.
-~ diathelia
                   
                   GNU LESSER GENERAL PUBLIC LICENSE
                        Version 2.1, February 1999
